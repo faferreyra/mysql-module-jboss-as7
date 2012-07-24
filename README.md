@@ -4,8 +4,9 @@ Mysql module for JBoss AS 7
 Instructions:
 
 1. Copy directory into $JBOSS_AS7_HOME/modules (the final result shoud be $JBOSS_AS7_HOME/modules/com/mysql...)
-2. To create a datasource which uses the module, open the standalone.xml or standalone-full.xml file, look for the <datasources> tag, and use this template as example:
+2. To create a datasource which uses the module, open the standalone.xml or standalone-full.xml file, look for the &lt;datasources&gt; tag, and use this template as example:
 
+    <code>
 	<datasource jndi-name="java:jboss/DefaultDS" pool-name="MySQLDefaultDS" enabled="true" jta="true" use-java-context="true">
 		<connection-url>jdbc:mysql://localhost:3306/myappdbname</connection-url>
 		<driver>mysql</driver>
@@ -40,3 +41,4 @@ Instructions:
 			<driver name="mysql" module="com.mysql.jdbc"/>
 		</drivers>
 	</datasource>
+	</code>
